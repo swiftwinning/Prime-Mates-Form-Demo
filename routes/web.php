@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'OrderController@showOrderForm');
+
+Route::post('/orderProcessing', 'OrderController@processOrder');
+
+Route::get('/orderConfirmation', 'OrderController@confirmOrder');
