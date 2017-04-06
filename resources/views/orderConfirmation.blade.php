@@ -25,7 +25,7 @@
         &#36; {{ $tax }} {{ $state }} sales tax<br>
         &#36; {{ $shipping }} shipping<br>
         <br>
-        &#36;{{ $price }} will being processed on your {{ $payment }}.        
+        &#36;{{ $price }} will be charged on your {{ $payment }}.        
     </div>
     
 @endsection

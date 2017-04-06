@@ -72,16 +72,18 @@ class OrderController extends Controller
     	date_default_timezone_set('America/New_York');
     	$deliveryTime = ($twoDay) ? 2 : 28;
     	$deliveryTimecode = 
-    	    mktime(0, 0, 0, date("m"), date("d") + $deliveryTime, date("Y") );
+    	        mktime(0, 0, 0, date("m"), date("d") + $deliveryTime, date("Y") );
     	$deliveryDate = date("F jS", $deliveryTimecode);
     	
-    	# Format $primate, $size, $state, and all dollar amounts.
+    	# Format $primate, $size, $state, $payment, and all dollar amounts.
     	$primate = ucfirst($primate);
     	$size = ucfirst($size);
+    	$payment = ucfirst($payment);
     	$state = strtoupper($state);
     	$tax = number_format($tax, 2);
     	$shipping = number_format($shipping, 2);
     	$price = number_format($price, 2);
+    	
     	
         return redirect('orderConfirmation')->with([
             'primate' => $primate,
@@ -96,6 +98,9 @@ class OrderController extends Controller
             'tax' => $tax,
             'shipping' => $shipping,
             'price' => $price]);
+            
+            
+            
     }
     
      /**

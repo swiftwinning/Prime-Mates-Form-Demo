@@ -107,9 +107,11 @@
             <option value="vista" 
                     @if(old("payment")=='vista') {{ 'selected' }} @endif>Vista</option>
             <option value="misterCard" 
-                    @if(old("payment")=='misterCard') {{ 'selected' }} @endif>MisterCard</option>
+                    @if(old("payment")=='misterCard') {{ 'selected' }} 
+                            @endif>MisterCard</option>
             <option value="payBuddy" 
-                    @if(old("payment")=='payBuddy') {{ 'selected' }} @endif>PayBuddy</option>
+                    @if(old("payment")=='payBuddy') {{ 'selected' }} 
+                            @endif>PayBuddy</option>
         </select>
         @if($errors->get('payment'))
             <span class='error'>{{ $errors->get('payment')[0] }}</span>
