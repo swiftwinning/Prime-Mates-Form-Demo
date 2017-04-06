@@ -98,7 +98,7 @@
         <br>
         
         <br>
-        <input type="checkbox" name="twoDay" value="twoDay">
+        <input type="checkbox" name="twoDay" id="twoDay" value="twoDay">
         <label for="twoDay">Include 2 Day Shipping for $4.99</label><br>
         
         <label for="payment">Payment Type</label>

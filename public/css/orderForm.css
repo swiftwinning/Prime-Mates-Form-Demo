@@ -1,5 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    background-color: #ddd;
 }
 
 .error {
@@ -19,6 +21,11 @@ section {
     padding: 1em;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: #fff;
+}
+
+p {
+    font-size: 1.1em;
 }
 
 footer a:link {
