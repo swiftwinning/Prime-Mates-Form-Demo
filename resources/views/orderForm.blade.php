@@ -23,15 +23,20 @@
             <span class='error'>{{ $errors->get('primate')[0] }}</span>
         @endif
         <br>
-        <input type="radio" name="primate" value="gibbon" id="gibbon">
+        <input type="radio" name="primate" value="gibbon" id="gibbon"
+                @if (old("primate")=='gibbon') {{ 'checked' }} @endif>
         <label for="gibbon">Gibbon</label><br>
-        <input type="radio" name="primate" value="lemur" id="lemur">
+        <input type="radio" name="primate" value="lemur" id="lemur"
+                @if (old("primate")=='lemur') {{ 'checked' }} @endif>
         <label for="lemur">Lemur</label><br>
-        <input type="radio" name="primate" value="marmoset" id="marmoset">
+        <input type="radio" name="primate" value="marmoset" id="marmoset"
+                @if (old("primate")=='marmoset') {{ 'checked' }} @endif>
         <label for="marmoset">Marmoset</label><br>
-        <input type="radio" name="primate" value="orangutan" id="orangutan">
+        <input type="radio" name="primate" value="orangutan" id="orangutan"
+                @if (old("primate")=='orangutan') {{ 'checked' }} @endif>
         <label for="orangutan">Orangutan</label><br>
-        <input type="radio" name="primate" value="tarsier" id="tarsier">
+        <input type="radio" name="primate" value="tarsier" id="tarsier"
+                @if (old("primate")=='tarsier') {{ 'checked' }} @endif>
         <label for="tarsier">Tarsier</label><br>
         
         <label for="size">Select Size</label>
@@ -68,12 +73,12 @@
         <label for="state">State</label>
         <select name="state" id="state">
             <option value="">-</option>
-            <option value="ct">CT</option>
-            <option value="ma">MA</option>
-            <option value="me">ME</option>
-            <option value="nh">NH</option>
-            <option value="ri">RI</option>
-            <option value="vt">VT</option>
+            <option value="ct" @if(old("state")=='ct') {{ 'selected' }} @endif>CT</option>
+            <option value="ma" @if(old("state")=='ma') {{ 'selected' }} @endif>MA</option>
+            <option value="me" @if(old("state")=='me') {{ 'selected' }} @endif>ME</option>
+            <option value="nh" @if(old("state")=='nh') {{ 'selected' }} @endif>NH</option>
+            <option value="ri" @if(old("state")=='ri') {{ 'selected' }} @endif>RI</option>
+            <option value="vt" @if(old("state")=='vt') {{ 'selected' }} @endif>VT</option>
         </select>
         @if($errors->get('state'))
             <span class='error'>{{ $errors->get('state')[0] }}</span>
@@ -94,9 +99,12 @@
         <label for="payment">Payment Type</label>
         <select name="payment" id="payment">
             <option value="">-</option>
-            <option value="vista">Vista</option>
-            <option value="misterCard">MisterCard</option>
-            <option value="payBuddy">PayBuddy</option>
+            <option value="vista" 
+                    @if(old("payment")=='vista') {{ 'selected' }} @endif>Vista</option>
+            <option value="misterCard" 
+                    @if(old("payment")=='misterCard') {{ 'selected' }} @endif>MisterCard</option>
+            <option value="payBuddy" 
+                    @if(old("payment")=='payBuddy') {{ 'selected' }} @endif>PayBuddy</option>
         </select>
         @if($errors->get('payment'))
             <span class='error'>{{ $errors->get('payment')[0] }}</span>

@@ -99,19 +99,19 @@ return [
 
     'custom' => [
         'primate' => [
-            'required' => 'You must choose a shirt design'
+            'required' => 'Choose your shirt design'
         ],
         'name' => [
             'required' => 'Name is required',
-            'alpha' => 'Name must be letters only'
+            'regex' => 'Name must be letters only'
         ],
         'address' => [
             'required' => 'Address is required',
-            'alpha_num' => 'Address must be numbers and letters only'
+            'regex' => 'Address must be numbers and letters only'
         ],
         'city' => [
             'required' => 'City/Town is required',
-            'alpha' => 'City/Town must be letters only'
+            'regex' => 'City/Town must be letters only'
         ],
         'state' => [
             'size' => 'State is required'

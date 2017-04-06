@@ -23,9 +23,15 @@ class OrderController extends Controller
         # Validate the request data
             $this->validate($request, [
                 'primate' => 'required',
-                'name' => 'required|alpha',
-                'address' => 'required|alpha_num',
-                'city' => 'required|alpha',
+                
+                # http://stackoverflow.com/questions/34099777/laravel-5-1-validation-rule-alpha-cannot-take-whitespace
+                #http://stackoverflow.com/questions/26720865/laravel-validate-only-letters-numbers-and-spaces-using-regex
+                #/(^[A-Za-z0-9 ]+$)+/'
+                #/^[A-Za-z0-9 ]+$/u'
+                #/^[\pL\s\-]+$/u'
+                'name' => 'required|regex:/^[A-Za-z ]+$/u',
+                'address' => 'required|regex:/^[A-Za-z0-9 .]+$/u',
+                'city' => 'required|regex:/^[A-Za-z ]+$/u',
                 'state' => 'size:2',
                 'zip' => 'required|numeric|digits:5',
                 'payment' => 'min:2',

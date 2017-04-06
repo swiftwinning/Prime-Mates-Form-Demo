@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <h1>Order Form</h1>
+    <h1>Order Confirmation</h1>
 
     <div>
         Your order of 1 {{ $size }} {{ $primate }} shirt is being processed.<br>
