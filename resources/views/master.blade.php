@@ -14,9 +14,14 @@
 <body>
 
     <header>
+        {{-- http://www.flaticon.com/free-icon/shirt_343214#term=t shirt&page=1&position=18 --}}
         <img src='{{ asset("images/shirt.svg") }}'
-        style='width:100px'
+        style='height:150px'
         alt='T Shirt Logo'>
+        {{-- https://convertio.co/txt-svg/ --}}
+        <img src='{{ asset("images/primeMatesLogo.svg") }}'
+        style='height:150px'
+        alt='Prime Mates Logo'>
     </header>
 
     <section>

@@ -5,3 +5,19 @@ body {
 .error {
     color: red;
 }
+
+footer a:link {
+    color: #555;
+}
+
+footer a:visited {
+    color: #111;
+}
+
+footer a:hover {
+    color: #777;
+}
+
+footer a:active {
+    color: #777;
+}

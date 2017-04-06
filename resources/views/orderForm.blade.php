@@ -8,8 +8,8 @@
 @section('content')
     <h1>Order Form</h1>
     
-    <p>Show everyone who your favorite animal friend is with a special T Shirt!<br>
-        Our all cotton T's can be shipped anywhere in the 6 state New England area.<br>
+    <p>Show everyone who your favorite animal friend is with a special T-Shirt!<br>
+        Our all-cotton T's can be shipped anywhere in the 6 state New England area.<br>
         Only &#36;19.95 &#43; sales tax. Free 4 week shipping included.
     </p>
     
