@@ -6,6 +6,21 @@ body {
     color: red;
 }
 
+.button {
+    color: #fff;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25em;
+}
+
+section {
+    margin: 2em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
 footer a:link {
     color: #555;
 }

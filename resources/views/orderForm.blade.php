@@ -23,6 +23,7 @@
             <span class='error'>{{ $errors->get('primate')[0] }}</span>
         @endif
         <br>
+        
         <input type="radio" name="primate" value="gibbon" id="gibbon"
                 @if (old("primate")=='gibbon') {{ 'checked' }} @endif>
         <label for="gibbon">Gibbon</label><br>
@@ -37,9 +38,13 @@
         <label for="orangutan">Orangutan</label><br>
         <input type="radio" name="primate" value="tarsier" id="tarsier"
                 @if (old("primate")=='tarsier') {{ 'checked' }} @endif>
-        <label for="tarsier">Tarsier</label><br>
+        <label for="tarsier">Tarsier</label>
+        <br>
         
+        <br>
         <label for="size">Select Size</label>
+        <br>
+        
         <select name="size" id="size">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -112,7 +117,7 @@
         <br>
 
         <br>
-        <input type='submit' class='btn btn-primary btn-small'>
+        <input type='submit' class='button'>
 
     </form>
     
