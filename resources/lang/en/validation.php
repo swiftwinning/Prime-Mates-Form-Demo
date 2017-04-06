@@ -98,9 +98,32 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'primate' => [
+            'required' => 'You must choose a shirt design'
         ],
+        'name' => [
+            'required' => 'Name is required',
+            'alpha' => 'Name must be letters only'
+        ],
+        'address' => [
+            'required' => 'Address is required',
+            'alpha_num' => 'Address must be numbers and letters only'
+        ],
+        'city' => [
+            'required' => 'City/Town is required',
+            'alpha' => 'City/Town must be letters only'
+        ],
+        'state' => [
+            'size' => 'State is required'
+        ],
+        'zip' => [
+            'required' => '5 digit Zip Code is required',
+            'numeric' => 'Zip Code must be numbers only',
+            'digits' => 'Please use 5 digit Zip Code'
+        ],
+        'payment' => [
+            'min' => 'Payment type is required'
+        ]
     ],
 
     /*

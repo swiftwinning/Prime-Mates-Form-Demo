@@ -19,6 +19,18 @@ class OrderController extends Controller
      *
      */
     public function processOrder(Request $request) {
+    
+        # Validate the request data
+            $this->validate($request, [
+                'primate' => 'required',
+                'name' => 'required|alpha',
+                'address' => 'required|alpha_num',
+                'city' => 'required|alpha',
+                'state' => 'size:2',
+                'zip' => 'required|numeric|digits:5',
+                'payment' => 'min:2',
+            ]);
+    
     	$primate = $request->input('primate');
     	$size = $request->input('size');
     	$name = $request->input('name');
