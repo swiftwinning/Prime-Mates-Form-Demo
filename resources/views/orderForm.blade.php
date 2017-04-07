@@ -1,4 +1,4 @@
-{{-- /resources/views/orderConfirmation.blade.php --}}
+{{-- /resources/views/orderForm.blade.php --}}
 @extends('master')
 
 @section('title')
