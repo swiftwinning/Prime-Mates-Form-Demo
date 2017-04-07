@@ -36,8 +36,6 @@
         title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
     </footer>
 
-    {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--}}
-
     @stack('body')
 
 </body>

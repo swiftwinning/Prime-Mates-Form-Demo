@@ -16,3 +16,7 @@ Route::get('/', 'OrderController@showOrderForm');
 Route::post('/orderProcessing', 'OrderController@processOrder');
 
 Route::get('/orderConfirmation', 'OrderController@confirmOrder');
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+

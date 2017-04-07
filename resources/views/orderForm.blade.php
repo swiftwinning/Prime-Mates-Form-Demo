@@ -119,7 +119,7 @@
         <br>
 
         <br>
-        <input type='submit' class='button'>
+        <input type='submit' class='button' value='Place Order'>
 
     </form>
     

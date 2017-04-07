@@ -84,7 +84,6 @@ class OrderController extends Controller
     	$shipping = number_format($shipping, 2);
     	$price = number_format($price, 2);
     	
-    	
         return redirect('orderConfirmation')->with([
             'primate' => $primate,
             'size' => $size,
@@ -98,9 +97,6 @@ class OrderController extends Controller
             'tax' => $tax,
             'shipping' => $shipping,
             'price' => $price]);
-            
-            
-            
     }
     
      /**
