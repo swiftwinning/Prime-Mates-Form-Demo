@@ -19,9 +19,11 @@
     
         {{ csrf_field() }}
 
-        @if($errors->get('primate'))
-            <span class='error'>{{ $errors->get('primate')[0] }}</span>
-        @endif
+        <span class='error'>*
+            @if($errors->get('primate'))
+                {{ $errors->get('primate')[0] }}
+            @endif
+        </span>
         <br>
         
         <input type="radio" name="primate" value="gibbon" id="gibbon"
@@ -56,23 +58,29 @@
         <br>
         <label for='name'>Name</label>
         <input type='text' name='name' id='name' value='{{ old("name") }}'>
-        @if($errors->get('name'))
-            <span class='error'>{{ $errors->get('name')[0] }}</span>
-        @endif
+        <span class='error'>*
+            @if($errors->get('name'))
+                {{ $errors->get('name')[0] }}
+            @endif
+        </span>
         <br>
         
         <label for='address'>Address</label>
         <input type='text' name='address' id='address' value='{{ old("address") }}'>
-        @if($errors->get('address'))
-            <span class='error'>{{ $errors->get('address')[0] }}</span>
-        @endif
+        <span class='error'>*
+            @if($errors->get('address'))
+                {{ $errors->get('address')[0] }}
+            @endif
+        </span>
         <br>
         
         <label for='city'>City/Town</label>
         <input type='text' name='city' id='city' value='{{ old("city") }}'>
-        @if($errors->get('city'))
-            <span class='error'>{{ $errors->get('city')[0] }}</span>
-        @endif
+        <span class='error'>*
+            @if($errors->get('city'))
+                {{ $errors->get('city')[0] }}
+            @endif
+        </span>
         <br>
         
         <label for="state">State</label>
@@ -85,16 +93,20 @@
             <option value="ri" @if(old("state")=='ri') {{ 'selected' }} @endif>RI</option>
             <option value="vt" @if(old("state")=='vt') {{ 'selected' }} @endif>VT</option>
         </select>
-        @if($errors->get('state'))
-            <span class='error'>{{ $errors->get('state')[0] }}</span>
-        @endif
+        <span class='error'>*
+            @if($errors->get('state'))
+                {{ $errors->get('state')[0] }}
+            @endif
+        </span>
         <br>
         
         <label for='zip'>Zip Code</label>
         <input type='text' name='zip' id='zip' value='{{ old("zip") }}'>
-        @if($errors->get('zip'))
-            <span class='error'>{{ $errors->get('zip')[0] }}</span>
-        @endif
+        <span class='error'>*
+            @if($errors->get('zip'))
+                {{ $errors->get('zip')[0] }}
+            @endif
+        </span>
         <br>
         
         <br>
@@ -113,9 +125,11 @@
                     @if(old("payment")=='payBuddy') {{ 'selected' }} 
                             @endif>PayBuddy</option>
         </select>
-        @if($errors->get('payment'))
-            <span class='error'>{{ $errors->get('payment')[0] }}</span>
-        @endif
+        <span class='error'>*
+            @if($errors->get('payment'))
+                {{ $errors->get('payment')[0] }}
+            @endif
+        </span>
         <br>
 
         <br>

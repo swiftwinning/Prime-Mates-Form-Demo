@@ -17,6 +17,8 @@ Route::post('/orderProcessing', 'OrderController@processOrder');
 
 Route::get('/orderConfirmation', 'OrderController@confirmOrder');
 
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+if(config('app.env') == 'local') {
+    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+}
 
 
